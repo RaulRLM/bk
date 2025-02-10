@@ -41,13 +41,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 app.use(cors())
 app.use(bodyParser.json())
 
-// Añadir la ruta raíz
-app.get('/', (req, res) => {
-  res.send(
-    'Bienvenido a la API Juego de Plantas. Ve a /api-docs para la documentación.',
-  )
-})
-
 // Rutas
 app.use('/usuaris', userRoutes)
 app.use('/plantas', plantRoutes)
