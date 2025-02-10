@@ -205,18 +205,16 @@ exports.createUser = (req, res) => {
       if (err) {
         return res.status(500).json({ error: err.message })
       }
-      res
-        .status(201)
-        .json({
-          id: result.insertId,
-          nom,
-          correu,
-          contrasenya,
-          edat,
-          nacionalitat,
-          codiPostal,
-          imatgePerfil,
-        })
+      res.status(201).json({
+        id: result.insertId,
+        nom,
+        correu,
+        contrasenya,
+        edat,
+        nacionalitat,
+        codiPostal,
+        imatgePerfil,
+      })
     },
   )
 }
