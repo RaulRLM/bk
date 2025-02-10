@@ -20,6 +20,7 @@ sql
   .connect(config)
   .then(() => {
     console.log('✅ Conectado a la base de datos')
+<<<<<<< HEAD
 
     // Realizar una consulta SQL para obtener algunos datos (ajusta el nombre de la tabla según tu base de datos)
     return sql.query('SELECT TOP 5 * FROM usuaris') // Cambia 'Plantas' por el nombre de tu tabla
@@ -32,4 +33,9 @@ sql
       '❌ Error al conectar con la base de datos o ejecutar la consulta:',
       err.message,
     )
+=======
+  })
+  .catch((err) => {
+    console.error('❌ Error al conectar con la base de datos:', err.message)
+>>>>>>> bd5b421cffc27cfb9e0a45cd54fc2aec1506c8ec
   })
